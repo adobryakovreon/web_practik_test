@@ -92,6 +92,7 @@
       display: none;
     }
     &-item {
+      position: relative;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -100,12 +101,29 @@
         margin-left: 62px;
       }
     }
+    &-icon {
+      position: relative;
+    }
     &-wrapper {
       display: flex;
       align-items: center;
     }
   }
-
+  &__order-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #e52d2d;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+  }
 }
 
 @media (835px <= width) {

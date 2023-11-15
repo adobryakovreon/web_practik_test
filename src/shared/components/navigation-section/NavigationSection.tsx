@@ -58,7 +58,11 @@ const NavigationSection = observer((): JSX.Element => {
           </div>
         </a>
         <div onClick={switchOrder} className={cn(classes['navigation__menu-panel-item'], classes['navigation__menu-panel-item_order'])}>
+          
           <div className={classes['navigation__menu-panel-icon']}>
+            {!!order.length && <div className={classes['navigation__order-count']}>
+              <span>{order.length}</span>
+            </div>}
             <OrderIcon/>
           </div>
           <div className={classes['navigation__menu-panel-text']}>
