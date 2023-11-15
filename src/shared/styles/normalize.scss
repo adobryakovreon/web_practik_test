@@ -1,0 +1,124 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul,li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+mark {
+  background: transparent;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #1D2228;
+}
+
+@media (835px <= width) {
+  h1 {
+    @include h1-d;
+  }
+  h2 {
+    @include h2-d;
+  }
+  h3 {
+    @include h2-d;
+  }
+  h4 {
+    @include h4-d;
+    
+  }
+  p {
+    @include assent-d;
+  }
+  span {
+    @include p-d
+  }
+  mark {
+    @include description-d
+  }
+}
+
+@media (321px <= width < 835px) {
+  h1 {
+    @include h1-t;
+  }
+  h2 {
+    @include h2-t;
+  }
+  h3 {
+    @include h2-t;
+  }
+  h4 {
+    @include h4-t; 
+  }
+  p {
+    @include assent-t;
+  }
+  span {
+    @include p-t
+  }
+  mark {
+    @include description-t
+  }
+
+}
+
+@media (max-width: 320px) {
+  h1 {
+    @include h1-m;
+  }
+  h2 {
+    @include h2-m;
+  }
+  h3 {
+    @include h2-m;
+  }
+  h4 {
+    @include h4-m; 
+  }
+  span {
+    @include p-m
+  }
+  p {
+    @include assent-m;
+  }
+  mark {
+    @include description-m
+  }
+
+
+}

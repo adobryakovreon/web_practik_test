@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import '../src/shared/styles/normalize.scss';
+import './shared/styles/variables.scss'
+import { MenuSection } from './shared/components/menu-section';
+import { PaymentDelivery } from './shared/components/payment-delivery';
+import { AboutSection } from './shared/components/about-section';
+import { InstSection } from './shared/components/inst-section';
+import { FooterSection } from './shared/components/footer-section/FooterSection';
+import { NewsSection } from './shared/components/news-section';
+import { HeaderSection } from './shared/components/header-section';
+import NavigationSection from './shared/components/navigation-section';
+import OrderModal from './shared/components/order-modal/OrderModal';
+import { useOrder } from './context/orderContext';
+import { observer } from 'mobx-react-lite';
 
-function App() {
+export const App = observer(() => {
+  const { openOrder } = useOrder()
+  console.log(openOrder)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavigationSection />
+      <HeaderSection/>
+      <NewsSection/>
+      <MenuSection/>
+      <PaymentDelivery/>
+      <AboutSection/>
+      <InstSection/>
+      <FooterSection/>
+      {openOrder && <OrderModal/>}
+    </>
   );
-}
+})
 
-export default App;
+

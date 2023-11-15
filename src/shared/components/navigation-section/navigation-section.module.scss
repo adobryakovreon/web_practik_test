@@ -1,0 +1,230 @@
+.navigation {
+  &__aside-menu {
+    color: #fff;
+    transition: .5s;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    right: -320px;
+    height: 100vh;
+    width: 320px;
+    background-color: #313945;
+    z-index: 5;
+    &_open {
+      right: 0;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &-contacts {
+      flex-grow: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: center;
+    }
+    &-links {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__aside-close-button {
+    color: inherit;
+    transition: .3s;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      color: #e52d2d;
+    } 
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 46px;
+    justify-content: center;
+  }
+  &__links-list {
+    display: none;
+    align-items: center;
+    gap: 60px;
+  }
+  &__link-text, &__aside-link {
+    transition: .3s;
+    text-align: center;
+    font-family: Alegreya;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    &:hover {
+      color: #e52d2d;
+    }
+  }
+  &__language-switch {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EFF0F1;
+  }
+  &__burger-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    transition: .3s;
+    &:hover {
+      color: #e52d2d;
+    }
+  }
+  &__menu-panel {
+    &-text {
+      display: none;
+    }
+    &-item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      &_order {
+        margin-left: 62px;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+}
+
+@media (835px <= width) {
+  .navigation {
+    &__wrapper {
+      gap: 88px;
+    }
+    &__logo {
+      &-wrapper {
+        margin-right: 50px;
+      }
+      &-icon {
+        width: 182px;
+        height: 84px;
+      }
+    }
+    &__links-list {
+      display: flex;
+    }
+    &__language-switch {
+      margin-left: 44px;
+    }
+    &__menu-panel {
+      &-item_order {
+        margin-left: 32px;
+      }
+      &-text{
+        display: block;
+      }
+    }
+    &__burger-button {
+      display: none;
+    }
+    &__aside-menu {
+      display: none;
+      
+    }
+  }
+}
+
+@media (321px <= width < 835px) {
+  .navigation {
+    &__logo {
+      &-icon {
+        width: 130px;
+        height: 60px;
+      }
+    }
+    &__wrapper {
+      justify-content: space-between;
+      padding: 32px 32px 0;
+    }
+    &__burger-button {
+      margin-left: 32px;
+    }
+    &__language-switch {
+      margin-left: 70px;
+    }
+    &__menu-panel {
+      &-item_order {
+        margin-left: 32px;
+      }
+    }
+    &__aside-menu {
+      padding: 44px 36px;
+      gap: 36px;
+      &-top {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      &-logo-wrapper {
+        display: none;
+      }
+      &-links {
+        gap: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .navigation {
+
+    &__logo {
+      &-icon {
+        width: 85px;
+        height: 39px;
+      }
+    }
+    &__wrapper {
+      justify-content: space-between;
+      padding: 12px 16px 0;
+    }
+    &__burger-button {
+      margin-left: 20px;
+    }
+    &__language-switch {
+      display: none;
+    }
+    &__menu-panel {
+      &-item_order {
+        margin-left: 16px;
+      }
+    }
+    &__aside-menu {
+      padding: 12px 16px;
+      gap: 81px;
+      &-top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &-links {
+        gap: 24px;
+      }
+
+    }
+  }
+}

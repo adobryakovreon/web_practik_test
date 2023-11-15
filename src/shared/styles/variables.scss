@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Alegreya:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+
+$color-white: #fff;
+$color-black: #000;
+$color-red: #E52D2D;
+$color-text-grey: #848A9A;
+$color-background-grey: #EFF0F1;
+$color-aside-background: #313945;
+$color-icons-background: #C5CBD1;
+$color-border-grey: #C4C7CA;
+
+
+$color-button-default: $color-red;
+$color-button-hovered: #FF3C3C;
+$color-button-pressed:#BF221E;
+$color-button-focus: #E52D2D;
+$color-button-disabled: #DBDBDB;
+$color-button-text-disabled: #939393; 
+
+@mixin h1-d{
+  font-family: Alegreya;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90px; /* 125% */
+  letter-spacing: 1px;
+}
+@mixin h2-d{
+  font-family: Alegreya;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 65px; /* 125% */
+  letter-spacing: 1px;
+  text-align: center;
+}
+@mixin h3-d{
+  font-family: Alegreya;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+}
+@mixin h4-d{
+  font-family: Alegreya;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30px;
+}
+@mixin assent-d{
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+@mixin p-d{
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+@mixin description-d{
+  color: #848A9A;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; 
+}
+
+@mixin h1-t{
+  font-family: Alegreya;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 65px; /* 125% */
+  letter-spacing: 1px;
+}
+@mixin h2-t{
+  font-family: Alegreya;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 60px; /* 150% */
+  letter-spacing: 1px;
+  text-align: center;
+}
+@mixin h3-t{
+  font-family: Alegreya;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30px;
+}
+@mixin h4-t{
+  font-family: Alegreya;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 27px; 
+}
+@mixin assent-t{
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+@mixin p-t{
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+@mixin description-t{
+  color: #848A9A;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@mixin h1-m{
+  font-family: Alegreya;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 50px; /* 125% */
+  letter-spacing: 1px;
+}
+@mixin h2-m{
+  font-family: Alegreya;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 35px; /* 125% */
+  letter-spacing: 1px;
+  text-align: center;
+}
+@mixin h3-m{
+  font-family: Alegreya;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 25px;
+}
+@mixin h4-m{
+  font-family: Alegreya;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+}
+@mixin assent-m{
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+@mixin p-m{
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+@mixin description-m{
+  color: #848A9A;
+  font-family: Roboto;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+
+
+@mixin font-roboto() {
+  font-family: Roboto;
+}
+
+@mixin font-alegreya() {
+  font-family: Alegreya;
+}

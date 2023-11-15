@@ -1,0 +1,25 @@
+.menu-wrapper {
+  display: grid;
+
+}
+
+@media (width >= 835px) {
+  .menu-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (321px <= width < 835px) {
+  .menu-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    
+  }
+}
+
+@media (max-width: 320px) {
+  .menu-wrapper {
+    gap: 12px;
+  }
+}

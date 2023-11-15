@@ -1,0 +1,33 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 320px) {
+  .about-wrapper {
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;  
+  }
+
+}
+
+@media (321px <= width < 835px) {
+  .about-wrapper {
+    gap: 12px;
+    padding-top: 83px;
+    padding-bottom: 81px;  
+  }
+
+
+}
+
+@media (835px <= width) {
+  .about-wrapper {
+    gap: 35px;
+    padding-top: 100px;
+    padding-bottom: 112px;  
+  }
+
+}

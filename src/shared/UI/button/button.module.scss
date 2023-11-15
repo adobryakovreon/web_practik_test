@@ -1,0 +1,76 @@
+@import "../../styles/variables.scss";
+
+.button {
+  @include font-alegreya();
+  background-color: $color-button-default;
+  color: $color-white;
+  border-radius: 5px;
+  font-size: 16px;
+  &:hover {
+    background-color: $color-button-hovered;
+  }
+  &:active {
+    background-color: $color-button-pressed;
+  }
+  &:focus {
+    background-color: $color-button-focus;
+  }
+  &:disabled {
+    background-color: $color-button-disabled;
+    color: $color-button-text-disabled;
+  }
+  &.button_uppercase {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 320px) {
+  .button {
+    @include font-roboto();
+    width: 120px;
+    height: 28px;
+    line-height: 20px;
+    font-weight: 500;
+    &.button_main {
+      @include font-alegreya();
+      width: 288px; 
+      height: 52px;
+      font-size: 18px;
+      line-height: normal;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media (321px <= width < 835px) {
+  .button {
+    width: 196px;
+    height: 40px;
+    letter-spacing: 0.889px;
+    line-height: normal;
+    font-style: normal;
+    &.button_main {
+      width: 304px;
+      height: 60px;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  } 
+}
+
+@media (835px <= width) {
+  .button {
+    font-size: 18px;
+    width: 240px;
+    height: 52px;
+    letter-spacing: 1px;
+    line-height: normal;
+    &.button_main {
+      width: 304px;
+      height: 60px;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  } 
+}

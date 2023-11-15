@@ -1,0 +1,115 @@
+@import '../../styles/variables.scss';
+
+.menu-section {
+  &__wrapper {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 40px;
+  }
+  &__filters-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  &__filters-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__filter-item-title {
+    color: inherit;
+    font-family: Alegreya;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    user-select: none;
+    transition: .3s;
+  }
+  &__filter-item-wrapper {
+    position: relative;
+  }
+  &__filter-item-icon {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0;
+    
+    transition: .3s;
+  }
+  &__filter-item-wrapper_selected {
+    color: $color-red;
+  }
+  &__filter-item-wrapper:hover {
+    color: $color-red;
+    & .menu-section__filter-item-icon {
+      transform: translateX(50%) translateY(-100%);
+      opacity: 1;
+    }
+  }
+
+}
+
+@media (max-width: 320px) {
+  .menu-section {
+    &__wrapper {
+      gap: 24px;  
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    &__filters-wrapper {
+      gap: 24px;
+    }
+    &__filters-list {
+      gap: 28px;
+    }
+    &__filter-item-title {
+      display: none;
+    }
+    &__filter-item-icon {
+      opacity: 1;
+      position: relative;
+      right: 0;
+      transform: translate(0,0);
+    }
+    &__filter-item-wrapper:hover {
+      & .menu-section__filter-item-icon {
+        fill: $color-red;
+        transform: none;
+      }
+      & .menu-section__filter-item-svg {
+        fill: $color-red
+      }
+      &_selected {
+        & .menu-section__filter-item-svg {
+          fill: $color-red
+        }
+      }
+    }
+  }
+}
+@media (321px <= width < 835px) {
+  .menu-section {
+    &__wrapper {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    &__filters-wrapper {
+      gap: 20px;
+    }
+  }
+}
+@media (835px <= width) {
+  .menu-section {
+    &__wrapper {
+      padding-top: 112px;
+      padding-bottom: 100px;
+    }
+    &__filters-wrapper {
+      gap: 55px;
+    }
+  }
+}

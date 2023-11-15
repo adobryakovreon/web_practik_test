@@ -1,0 +1,74 @@
+@import '../../../../../shared/styles/variables.scss';
+
+.size-toggler {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__title {
+    color: #000;
+    text-align: center;
+    @include description-d
+  }
+}
+
+.size-toggler__list {
+  @include font-roboto;
+  --gap: 2px;
+  --width: 52px;
+  --bg-offset: calc( var(--gap) * 2 + var(--width) );
+  $height: 28px;
+  position: relative;
+  max-width: fit-content;
+  display: inline-flex;
+  padding: var(--gap);
+  background-color: $color-background-grey;
+  color: $color-text-grey;
+  gap: var(--gap);
+  clear: both;
+  border-radius: 4px;
+  justify-content: space-between;
+  &::after {
+    content: "";
+    width: var(--width);
+    height: $height;
+    background: $color-white;
+    border-radius: 2px;
+    position: absolute;
+    top: 2px;
+    left: var(--bg-offset);
+    transition: left .4s;
+  }
+}
+
+.size-toggler__item {
+  background: transparent;
+  font-size: 12px;
+  width: 52px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: $color-black;
+  }
+  &_selected {
+    color: $color-black;
+  }
+}
+
+@media (min-width: 321px) {
+  .size-toggler__item {
+    width: 58px;
+  }
+  .size-toggler__list {
+    --width: 58px;
+  }
+}

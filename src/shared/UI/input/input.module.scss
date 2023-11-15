@@ -1,0 +1,222 @@
+$prime-color: #3F8FE5;
+
+.input {
+  &__error {
+    color: #FB7A7A;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    position: absolute;
+    bottom: -18px;
+    left:0;
+  }
+  &__label {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    // overflow: hidden;
+    &_error {
+      &:hover {
+        border-color: #FB7A7A;
+        & .input_input {
+          border-color: #FB7A7A;
+
+        }
+      }
+
+      font-size: 16px;
+      caret-color: #FB7A7A;
+      & .input__input {
+        &:hover {
+          border-color: #FB7A7A;
+        }
+  
+        caret-color: #FB7A7A;
+        border-color: #FB7A7A;
+        border-top-color: #FB7A7A;
+        &:focus {
+          border-color: #FB7A7A;
+          border-top-color: transparent;
+          & + .input__span {
+            color: #FB7A7A;
+            &::before, &::after {
+            border-top-color:  #FB7A7A!important;
+          }
+          }
+        }
+        &:not(:focus) {
+          &:hover {
+            border-color: #FB7A7A;
+          }
+          
+          & + .input__span {
+            color: #FB7A7A;
+            &::before, &::after {
+            border-top-color: transparent;
+          }
+          }
+        }
+        &:not(:focus):placeholder-shown + .input__span {
+          border-top-color: transparent;
+        }
+      }
+      
+    }
+  }
+
+  &__input {
+      font-family: Roboto;
+      box-sizing: border-box;
+      margin: 0;
+      border: solid 1px; 
+      border-color: rgba(0, 0, 0, 0.6);
+      border-top-color: transparent;
+      border-radius: 4px;
+      padding: 13px 12px 13px;
+      width: 100%;
+      height: inherit;
+      color: rgba( 0, 0, 0, 0.87);
+      background-color: transparent;
+      box-shadow: none; 
+      font-size: inherit;
+      line-height: inherit;
+      caret-color: $prime-color;
+      transition: border 0.2s, box-shadow 0.2s;
+  }
+
+
+  &__span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      border-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      max-height: 100%;
+      color: rgba( 0, 0, 0, 0.6);
+      font-size: 75%;
+      line-height: 15px;
+      cursor: text;
+      transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+  }
+
+
+  &__span::before,
+  &__span::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      margin-top: 8px;
+      border-top: solid 1px;
+      border-top-color: rgba(0, 0, 0, 0.6);
+      min-width: 10px;
+      height: 8px;
+      pointer-events: none;
+      box-shadow: inset 0 1px transparent;
+      transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  &__span::before {
+      margin-right: 5px;
+      border-left: solid 1px transparent;
+      border-radius: 4px 0;
+  }
+
+  &__span::after{
+      flex-grow: 1;
+      margin-left: 6px;
+      border-right: solid 1px transparent;
+      border-radius: 0 4px;
+  }
+
+  &__input {
+      border-color: rgba(0, 0, 0, 0.87);
+      border-top-color: transparent;
+  }
+
+  &__span::before,
+  &__span::after {
+      border-top-color: rgba(0, 0, 0, 0.87);
+  }
+
+  &__label:hover > &__input:not(:focus):placeholder-shown {
+      border-color: rgba(0, 0, 0, 0.87);
+  }
+
+  /* Placeholder-shown */
+  &__label > input:not(:focus):placeholder-shown,
+  &__label > textarea:not(:focus):placeholder-shown {
+      border-top-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__label > input:not(:focus):placeholder-shown + span,
+  &__label > textarea:not(:focus):placeholder-shown + span {
+      font-size: inherit;
+      line-height: 68px;
+  }
+
+  &__label > input:not(:focus):placeholder-shown + span::before,
+  &__label > textarea:not(:focus):placeholder-shown + span::before,
+  &__label > input:not(:focus):placeholder-shown + span::after,
+  &__label > textarea:not(:focus):placeholder-shown + span::after {
+      border-top-color: transparent;
+  }
+
+  /* Focus */
+  &__label > input:focus,
+  &__label > textarea:focus {
+      border-color: $prime-color;
+      border-top-color: transparent;
+      outline: none;
+  }
+
+  &__label > input:focus + span,
+  &__label > textarea:focus + span {
+      color: $prime-color;
+  }
+
+  &__label > input:focus + span::before,
+  &__label > input:focus + span::after,
+  &__label > textarea:focus + span::before,
+  &__label > textarea:focus + span::after {
+      border-top-color:  $prime-color !important;
+      box-shadow:$prime-color inset 0 1px var(--input__safari-helper1);
+  }
+
+  /* Disabled */
+  &__label > input:disabled,
+  &__label > input:disabled + span,
+  &__label > textarea:disabled,
+  &__label > textarea:disabled + span {
+      border-color: rgba(var(--input__onsurface-rgb, 0, 0, 0), 0.38) !important;
+      border-top-color: transparent !important;
+      color: rgba(var(--input__onsurface-rgb, 0, 0, 0), 0.38);
+      pointer-events: none;
+  }
+
+  &__label > input:disabled + span::before,
+  &__label > input:disabled + span::after,
+  &__label > textarea:disabled + span::before,
+  &__label > textarea:disabled + span::after {
+      border-top-color: rgba(var(--input__onsurface-rgb, 0, 0, 0), 0.38) !important;
+  }
+
+  &__label > input:disabled:placeholder-shown,
+  &__label > input:disabled:placeholder-shown + span,
+  &__label > textarea:disabled:placeholder-shown,
+  &__label > textarea:disabled:placeholder-shown + span {
+      border-top-color: rgba(var(--input__onsurface-rgb, 0, 0, 0), 0.38) !important;
+  }
+
+  &__label > input:disabled:placeholder-shown + span::before,
+  &__label > input:disabled:placeholder-shown + span::after,
+  &__label > textarea:disabled:placeholder-shown + span::before,
+  &__label > textarea:disabled:placeholder-shown + span::after {
+      border-top-color: transparent !important;
+  }
+}
