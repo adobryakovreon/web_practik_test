@@ -31,21 +31,24 @@
   }
   &__filter-item-wrapper {
     position: relative;
+    &_selected {
+      color: $color-red;
+      &:hover {
+        color: $color-red;
+      }
+    }
   }
   &__filter-item-icon {
     position: absolute;
     right: 50%;
     transform: translateX(50%);
     opacity: 0;
-    
     transition: .3s;
-  }
-  &__filter-item-wrapper_selected {
-    color: $color-red;
   }
   &__filter-item-wrapper:hover {
     color: $color-red;
     & .menu-section__filter-item-icon {
+      color: #C5CBD1;
       transform: translateX(50%) translateY(-100%);
       opacity: 1;
     }
@@ -74,18 +77,24 @@
       position: relative;
       right: 0;
       transform: translate(0,0);
+      color: #C5CBD1;
     }
-    &__filter-item-wrapper:hover {
-      & .menu-section__filter-item-icon {
-        fill: $color-red;
-        transform: none;
-      }
-      & .menu-section__filter-item-svg {
-        fill: $color-red
-      }
+    &__filter-item-wrapper {
       &_selected {
+        color: red;
+      }
+      &:hover {
+        & .menu-section__filter-item-icon {
+          transform: none;
+        }
         & .menu-section__filter-item-svg {
-          fill: $color-red
+          fill: $color-red;
+        }
+        &_selected {
+          color: $color-red;
+        }
+        &:hover .menu-section__filter-item-svg {
+          color: $color-red
         }
       }
     }
