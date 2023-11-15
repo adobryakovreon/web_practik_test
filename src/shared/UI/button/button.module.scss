@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .button {
     @include font-roboto();
     width: 120px;
@@ -43,7 +43,7 @@
   }
 }
 
-@media (321px <= width < 835px) {
+@media (481px <= width < 835px) {
   .button {
     width: 196px;
     height: 40px;

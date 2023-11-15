@@ -43,7 +43,7 @@
   }
 }
 
-@media (321px <= width < 835px) {
+@media (481px <= width < 835px) {
   .news-section {
     &__wrapper {
       padding-top: 100px;
@@ -64,7 +64,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .news-section {
     &__wrapper {
       padding: 60px 16px 0;

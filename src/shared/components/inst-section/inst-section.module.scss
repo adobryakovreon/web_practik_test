@@ -22,7 +22,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .inst-section {
     &__title-wrapper {
       gap: 4px;
@@ -31,8 +31,8 @@
       grid-template-columns: repeat(2, 1fr);
     }
     &__photo-wrapper{
-      width: 160px;
-      height: 160px;
+      min-width: 240px;
+      min-height: 240px;
       &:nth-child(1n+5) {
         display: none;
       }
@@ -40,7 +40,7 @@
   }
 }
 
-@media (321px <= width < 835px) {
+@media (481px <= width < 835px) {
   .inst-section {
     &__gallery-wrapper {
       grid-template-columns: repeat(3, 1fr);

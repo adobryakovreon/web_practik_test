@@ -7,7 +7,7 @@ export const NewsSection = (): JSX.Element => {
       <div className={classes['news-section__items-wrapper']}>
         <div id='first' className={classes['news-section__item']}>
           <div className={classes['news-section__image-wrapper']}>
-            <img className={classes['news-section__image']} src="/event 1.png" alt="" />
+            <img className={classes['news-section__image']} src="/event-1.png" alt="" />
           </div>
           <div className={classes['news-section__text-wrapper']}>
             <h4>Закажи 2 пиццы – 3-я в подарок</h4>
@@ -16,7 +16,7 @@ export const NewsSection = (): JSX.Element => {
         </div>
         <div id='second' className={classes['news-section__item']}>
           <div className={classes['news-section__image-wrapper']}>
-            <img className={classes['news-section__image']} src="/event 2.png" alt="" />
+            <img className={classes['news-section__image']} src="/event-2.png" alt="" />
           </div>
           <div className={classes['news-section__text-wrapper']}>
             <h4>Напиток в подарок</h4>
@@ -25,7 +25,7 @@ export const NewsSection = (): JSX.Element => {
         </div>
         <div id='third' className={classes['news-section__item']}>
           <div className={classes['news-section__image-wrapper']}>
-            <img className={classes['news-section__image']} src="/event 3.png" alt="" />
+            <img className={classes['news-section__image']} src="/event-3.png" alt="" />
           </div>
           <div className={classes['news-section__text-wrapper']}>
             <h4>25% при первом заказе</h4>

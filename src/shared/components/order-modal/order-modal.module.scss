@@ -42,7 +42,7 @@
   }
   &__order-list {
     max-height: 370px;
-    overflow-y: auto;
+    overflow: auto;
     display: flex;
     flex-direction: column;
   }
@@ -151,7 +151,7 @@
     }
     &__order-list {
       max-height: 250px;
-      overflow-y: scroll;
+      overflow: auto;
       display: flex;
       flex-direction: column;
     }
@@ -160,6 +160,15 @@
     }
     &__contacts-phone-wrapper {
       margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    &__content-wrapper {
+      width: 600px;
+      padding: 8px
     }
   }
 }

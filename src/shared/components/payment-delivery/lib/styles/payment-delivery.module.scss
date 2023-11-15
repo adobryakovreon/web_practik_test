@@ -11,7 +11,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .pay-del {
     &__section {
       padding-top: 24px;
@@ -29,7 +29,7 @@
   }
 }
 
-@media (321px <= width < 835px) {
+@media (481px <= width < 835px) {
   .pay-del {
     &__section {
       padding-top: 40px;

@@ -38,7 +38,7 @@
     width: 196px;
     max-width: 196px;
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
   }
   &__size {
@@ -93,6 +93,24 @@
     &-icon {
       width: 24px;
       height: 24px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .order-item {
+    &__counter {
+      margin: 0;
+    }
+    &__description {
+      margin: 0px;
+    }
+    &__name {
+      max-width: 100px;
+    }
+    &__price {
+      flex-grow: 1;
+      font-size: 16px;
     }
   }
 }

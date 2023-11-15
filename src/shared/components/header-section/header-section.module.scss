@@ -30,7 +30,7 @@
   }
 }
 
-@media (321px <= width < 835px) {
+@media (481px <= width < 835px) {
   .header-section {
     &__text-wrapper {
       max-width: 369px;
@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .header-section {
     &__wrapper {
       flex-direction: column-reverse;

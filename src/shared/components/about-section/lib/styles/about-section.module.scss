@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .about-wrapper {
     gap: 20px;
     padding-top: 20px;
@@ -13,7 +13,7 @@
 
 }
 
-@media (321px <= width < 835px) {
+@media (481px <= width < 835px) {
   .about-wrapper {
     gap: 12px;
     padding-top: 83px;

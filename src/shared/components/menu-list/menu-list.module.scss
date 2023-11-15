@@ -10,7 +10,7 @@
   }
 }
 
-@media (321px <= width < 835px) {
+@media (481px <= width < 835px) {
   .menu-wrapper {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
@@ -18,7 +18,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .menu-wrapper {
     gap: 12px;
   }
