@@ -7,6 +7,10 @@
   scroll-behavior: smooth;
 }
 
+#root {
+  position: relative;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

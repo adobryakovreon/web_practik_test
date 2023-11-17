@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BurgerButton } from '../../svg-icons/burger-button';
 import { Logo } from '../../svg-icons/logo';
 import { OrderIcon } from '../../svg-icons/order-icon';
@@ -8,14 +8,19 @@ import cn from 'classnames';
 import { Cross } from '../../svg-icons/cross';
 import { useOrder } from '../../../context/orderContext';
 import { observer } from 'mobx-react-lite';
+import { useSticky } from '../../../hooks/useSticky';
+// import { useSticky } from '../../../hooks/useSticky';
 
 const NavigationSection = observer((): JSX.Element => {
-  
+  const ref = useRef<HTMLDivElement>(null)
+  const isSticky = useSticky(ref);
   const [isOpen, setIsOpen] = useState(false);
   const {order, switchOrder} = useOrder()
+  
   const handleToggleAside = () => {
     setIsOpen(!isOpen)
   }
+
   const getOrderDescription = () => {
     if (!order.length) {
       return 'В корзине пусте, в животе урчит'
@@ -31,7 +36,9 @@ const NavigationSection = observer((): JSX.Element => {
 
   return (
     <>
-    <section className={classes['navigation__wrapper']}>
+    <div ref={ref} className={cn(classes['navigation__wrapper'], {
+      [classes['navigation__wrapper_sticky']]: isSticky
+    })}>
       <div className={classes['navigation__logo-wrapper']}>
         <Logo className={classes['navigation__logo-icon']} fill='#000'/>
       </div>
@@ -80,7 +87,7 @@ const NavigationSection = observer((): JSX.Element => {
             <BurgerButton />
           </button>
       </div>
-    </section>
+    </div>
     <aside className={cn(classes['navigation__aside-menu'], {
       [classes['navigation__aside-menu_open']]: isOpen
     })}>
