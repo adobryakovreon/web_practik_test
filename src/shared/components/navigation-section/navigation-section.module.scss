@@ -127,7 +127,7 @@
   }
 }
 
-@media (835px <= width) {
+@media (1300px <= width) {
   .navigation {
     &__wrapper {
       gap: 88px;
@@ -165,7 +165,7 @@
   }
 }
 
-@media (481px <= width < 835px) {
+@media (481px <= width < 1300px) {
   .navigation {
     &__logo {
       &-icon {
@@ -215,7 +215,6 @@
 
 @media (max-width: 480px) {
   .navigation {
-
     &__logo {
       &-icon {
         width: 85px;
@@ -225,7 +224,6 @@
     &__wrapper {
       justify-content: space-between;
       padding: 12px 16px 0;
-      // transition: .5s;
       &_sticky {
         position: sticky;
         top: calc(-100% - 2px);

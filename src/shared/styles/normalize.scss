@@ -51,7 +51,7 @@ hr {
   border-top: 1px solid #1D2228;
 }
 
-@media (835px <= width) {
+@media (1300px <= width) {
   h1 {
     @include h1-d;
   }
@@ -76,7 +76,7 @@ hr {
   }
 }
 
-@media (481px <= width < 835px) {
+@media (481px <= width < 1300px) {
   h1 {
     @include h1-t;
   }
