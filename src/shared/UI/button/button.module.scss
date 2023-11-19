@@ -28,8 +28,9 @@
 @media (max-width: 480px) {
   .button {
     @include font-roboto();
-    width: 120px;
+    width: max-content;
     height: max-content;
+    padding: 4px 21px;
     line-height: 20px;
     font-weight: 500;
     &.button_main {
