@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 * {
   margin: 0;
@@ -17,8 +17,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -28,17 +27,19 @@ button {
   cursor: pointer;
 }
 
-ul,li {
+ul,
+li {
   list-style: none;
 }
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 a {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
 mark {
@@ -48,7 +49,7 @@ mark {
 hr {
   width: 100%;
   border: none;
-  border-top: 1px solid #1D2228;
+  border-top: 1px solid #1d2228;
 }
 
 @media (1300px <= width) {
@@ -63,16 +64,15 @@ hr {
   }
   h4 {
     @include h4-d;
-    
   }
   p {
     @include assent-d;
   }
   span {
-    @include p-d
+    @include p-d;
   }
   mark {
-    @include description-d
+    @include description-d;
   }
 }
 
@@ -87,18 +87,17 @@ hr {
     @include h2-t;
   }
   h4 {
-    @include h4-t; 
+    @include h4-t;
   }
   p {
     @include assent-t;
   }
   span {
-    @include p-t
+    @include p-t;
   }
   mark {
-    @include description-t
+    @include description-t;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -112,17 +111,15 @@ hr {
     @include h2-m;
   }
   h4 {
-    @include h4-m; 
+    @include h4-m;
   }
   span {
-    @include p-m
+    @include p-m;
   }
   p {
     @include assent-m;
   }
   mark {
-    @include description-m
+    @include description-m;
   }
-
-
 }

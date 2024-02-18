@@ -1,10 +1,10 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .menu-section {
   &__wrapper {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
   }
   &__filters-list {
@@ -27,7 +27,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     user-select: none;
-    transition: .3s;
+    transition: 0.3s;
   }
   &__filter-item-wrapper {
     position: relative;
@@ -43,23 +43,22 @@
     right: 50%;
     transform: translateX(50%);
     opacity: 0;
-    transition: .3s;
+    transition: 0.3s;
   }
   &__filter-item-wrapper:hover {
     color: $color-red;
     & .menu-section__filter-item-icon {
-      color: #C5CBD1;
+      color: #c5cbd1;
       transform: translateX(50%) translateY(-100%);
       opacity: 1;
     }
   }
-
 }
 
-@media (max-width: 480px) {
+@media (max-width: 565px) {
   .menu-section {
     &__wrapper {
-      gap: 24px;  
+      gap: 24px;
       padding-top: 60px;
       padding-bottom: 60px;
     }
@@ -76,8 +75,8 @@
       opacity: 1;
       position: relative;
       right: 0;
-      transform: translate(0,0);
-      color: #C5CBD1;
+      transform: translate(0, 0);
+      color: #c5cbd1;
     }
     &__filter-item-wrapper {
       &_selected {
@@ -94,13 +93,13 @@
           color: $color-red;
         }
         &:hover .menu-section__filter-item-svg {
-          color: $color-red
+          color: $color-red;
         }
       }
     }
   }
 }
-@media (481px <= width < 835px) {
+@media (566px <= width < 835px) {
   .menu-section {
     &__wrapper {
       padding-top: 80px;

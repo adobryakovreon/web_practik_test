@@ -7,18 +7,16 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-grow: 2;
+    margin: 0 0 0 auto;
   }
-  
 }
 
 @media (900px <= width) {
-
   .header-section {
     padding: 0px 304px;
     &__wrapper {
-      gap:100px;
-    }  
+      gap: 100px;
+    }
     &__text-wrapper {
       max-width: 504px;
     }
@@ -34,8 +32,8 @@
 @media (669px <= width < 900px) {
   .header-section {
     &__wrapper {
-     overflow: hidden;
-    }  
+      overflow: hidden;
+    }
     &__text-wrapper {
       max-width: 369px;
       padding-left: 31px;
@@ -52,7 +50,7 @@
       max-width: 503px;
       min-height: 300px;
       position: relative;
-      margin-right: -72px
+      margin-right: -72px;
     }
   }
 }

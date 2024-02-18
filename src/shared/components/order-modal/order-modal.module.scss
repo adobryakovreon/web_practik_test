@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .modal {
   &__wrapper {
@@ -9,18 +9,17 @@
     bottom: 0;
     width: 100%;
     height: 100vh;
-    z-index: 5;
-    background: rgba($color: #000000, $alpha: .9);
-    padding: 100px 0;
+    z-index: 1005;
+    background: rgba($color: #000000, $alpha: 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
   }
   &__content-wrapper {
     border-radius: 5px;
-    background: rgba($color: #fff, $alpha: 1.0);
+    background: rgba($color: #fff, $alpha: 1);
     width: 704px;
-    z-index: 6;
+    z-index: 1006;
     position: relative;
     padding: 32px 32px 40px;
     display: flex;
@@ -30,15 +29,15 @@
     position: absolute;
     top: 21px;
     right: 20px;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
-      color: $color-red
+      color: $color-red;
     }
   }
   &__title {
     text-align: left;
     padding-bottom: 24px;
-    border-bottom: 1px solid #DCDFE2;
+    border-bottom: 1px solid #dcdfe2;
   }
   &__order-list {
     max-height: 370px;
@@ -46,7 +45,8 @@
     display: flex;
     flex-direction: column;
   }
-  &__total-price, &__conacts-title {
+  &__total-price,
+  &__conacts-title {
     font-size: 32px;
     font-family: Alegreya;
     font-weight: 800;
@@ -60,7 +60,6 @@
       align-items: baseline;
       gap: 20px;
     }
-    
   }
   &__contacts {
     &-title {
@@ -88,18 +87,18 @@
     font-size: 16px;
     margin-left: 28px;
     font-weight: 400;
-    transition: .3s;
+    transition: 0.3s;
     &:before {
-      transition: hover .3s;
+      transition: hover 0.3s;
     }
     &:before {
-      content: '';
+      content: "";
       position: absolute;
-      top:-2px;
+      top: -2px;
       left: -28px;
       width: 20px;
       height: 20px;
-      border: 1px solid #C4C7CA;
+      border: 1px solid #c4c7ca;
       border-radius: 50%;
     }
     &:hover::before {
@@ -109,18 +108,18 @@
       &::before {
         height: 20px;
         left: -29px;
-        outline: 2px solid #363D44;
+        outline: 2px solid #363d44;
         outline-offset: -2px;
       }
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 3px;
         left: -24.5px;
         width: 12px;
         height: 12px;
         border-radius: 50%;
-        background-color: #E52D2D;
+        background-color: #e52d2d;
       }
     }
   }
@@ -147,7 +146,7 @@
     }
     &__title {
       font-size: 26px;
-      padding: 0
+      padding: 0;
     }
     &__order-list {
       max-height: 250px;
@@ -156,7 +155,7 @@
       flex-direction: column;
     }
     &__contacts-form {
-      gap:5px;
+      gap: 5px;
     }
     &__contacts-phone-wrapper {
       margin-bottom: 5px;
@@ -167,11 +166,25 @@
 @media (max-width: 480px) {
   .modal {
     &__content-wrapper {
-      width: 600px;
-      padding: 8px
+      width: 480px;
+      padding: 8px;
     }
     &__cross-wrapper {
-      top:5px;
+      top: 5px;
+      right: 5px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .modal {
+    &__content-wrapper {
+      width: 300px;
+      padding: 8px;
+      max-height: 100%;
+    }
+    &__cross-wrapper {
+      top: 5px;
       right: 5px;
     }
   }

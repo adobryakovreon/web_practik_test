@@ -1,6 +1,5 @@
 .menu-wrapper {
   display: grid;
-
 }
 
 @media (width >= 1300px) {
@@ -14,21 +13,19 @@
   .menu-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    
   }
 }
-
 
 @media (755px <= width < 1300px) {
   .menu-wrapper {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    
   }
 }
 
 @media (max-width: 480px) {
   .menu-wrapper {
+    grid-template-columns: repeat(1, 1fr);
     gap: 12px;
   }
 }
